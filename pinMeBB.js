@@ -5,6 +5,7 @@ function pinMeBB(
 		minChar: 5,
 	}
 ) {
+	if ((data.minChar || data.limit) > data.limit) data.limit = data.minChar;
 	var el = document.getElementById(elID);
 	el.insertAdjacentHTML(
 		"beforeend",
@@ -52,7 +53,7 @@ function pinMeBB(
 		.getElementById("enter")
 		.addEventListener("click", (e) =>
 			el.dispatchEvent(
-				input_value.value.length < data.minChar
+				input_value.value.length < (data.minChar || data.limit)
 					? eventEmpty
 					: eventEnter
 			)
