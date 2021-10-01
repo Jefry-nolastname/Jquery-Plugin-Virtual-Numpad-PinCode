@@ -1,10 +1,11 @@
 # Jquery-Plugin-Virtual-Numpad-PinCode
 jquery plugin to create virtual numpad for pin auth
 
-//prepare space for the numpad
+/*prepare space for the numpad
 <center>
 <div id="pinpad"/>  <!-- this is where we put the numpad -->
 </center>
+*/
 
 
 // run this javascript
