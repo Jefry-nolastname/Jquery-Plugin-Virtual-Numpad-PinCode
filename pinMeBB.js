@@ -37,8 +37,12 @@ function pinMeBB(
 		detail: { password: () => input_value.value },
 	});
 
-	const eventMaxed = new Event("onMaxChar");
-	const eventEmpty = new Event("onEmpty");
+	const eventMaxed = new CustomEvent("onMaxChar",{
+		detail: { password: () => input_value.value },
+	});
+	const eventEmpty = new CustomEvent("onEmpty",{
+		detail: { password: () => input_value.value },
+	});
 
 	function field(value) {
 		if (input_value.value.length > data.limit) {
